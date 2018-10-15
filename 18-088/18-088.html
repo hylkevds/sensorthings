@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<title>OGC SensorThings API v1.1 Part 1: Sensing</title>
+<title>OGC SensorThings API Part 1: Sensing Version 1.1</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -486,7 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book">
 <div id="header">
-<h1>OGC SensorThings API v1.1 Part 1: Sensing</h1>
+<h1>OGC SensorThings API Part 1: Sensing Version 1.1</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -513,7 +513,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:      &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document:	<a href="http://www.opengis.net/doc/is/sensorthings/1.1" class="bare">http://www.opengis.net/doc/is/sensorthings/1.1</a></p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document:	<a href="http://www.opengis.net/doc/is/sensorthings/1.0" class="bare">http://www.opengis.net/doc/is/sensorthings/1.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">URL for this OGC&#174; document:</p></td>
@@ -535,7 +535,7 @@ which may include some normative corrections.</p></td>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category:      OGC&#174; Implementation Specification</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editors:       Steve Liang, Chih-Yuan Huang, Tania Khalafbeigi</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editors:       Steve Liang, Tania Khalafbeigi</p></td>
 </tr>
 </tbody>
 </table>
@@ -545,7 +545,7 @@ which may include some normative corrections.</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">OGC SensorThings API v1.1 Part 1: Sensing</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">OGC SensorThings API Part 1: Sensing Version 1.1</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -1087,7 +1087,7 @@ which may include some normative corrections.</p></td>
 <h2 id="abstract"><a class="anchor" href="#abstract"></a>Abstract</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The OGC SensorThings API provides an open, geospatial-enabled and unified way to interconnect the internet of things (iot) devices, data, and applications over the web. At a high level the OGC SensorThings API provides two main functionalities and each function is handled by a part. The two parts are the sensing part and the tasking part. The sensing part provides a standard way to manage and retrieve observations and metadata from heterogeneous iot sensor systems. The tasking part is planned as a future work activity and will be defined in a separate document as the part ii of the sensorthings api.</p>
+<p>The OGC SensorThings API provides an open, geospatial-enabled and unified way to interconnect the internet of things (iot) devices, data, and applications over the web. At a high level the OGC SensorThings API provides two main functionalities and each function is handled by a part. The two parts are the sensing part and the tasking part. The sensing part provides a standard way to manage and retrieve observations and metadata from heterogeneous iot sensor systems. This document is version 1.1 and it is extending the first version of Sensing part.</p>
 </div>
 </div>
 </div>
@@ -1184,11 +1184,6 @@ which may include some normative corrections.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">University of Calgary, Canada / SensorUp Inc.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Alec Chih-Yuan Huang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">National Central University, Taiwan</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
@@ -2454,6 +2449,20 @@ CRUD::Create, Read, Update, and Delete</p>
 <p>One (mandatory)</p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>properties</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A JSON Object containing user-annotated properties as key-value pairs.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>JSON Object</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Zero-to-one</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <table id="req-location-relations" class="tableblock frame-all grid-all stretch">
@@ -2980,6 +2989,20 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>properties</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A JSON Object containing user-annotated properties as key-value pairs.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>JSON Object</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Zero-to-one</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>observedArea</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
@@ -3359,6 +3382,20 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <p>One (mandatory)</p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>properties</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A JSON Object containing user-annotated properties as key-value pairs.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>JSON Object</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Zero-to-one</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <table id="tab-relation-sensor" class="tableblock frame-all grid-all stretch">
@@ -3587,6 +3624,20 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>One (mandatory)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>properties</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A JSON Object containing user-annotated properties as key-value pairs.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>JSON Object</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Zero-to-one</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3845,10 +3896,10 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <p>Key-value pairs showing the environmental conditions during measurement.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>NamedValues in a JSON Array</p>
+<p>JSON Object</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Zero-to-one</p>
+<p>Zero-to-One</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -4081,6 +4132,20 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>One (mandatory)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>properties</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A JSON Object containing user-annotated properties as key-value pairs.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>JSON Object</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Zero-to-one</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -7086,6 +7151,20 @@ Content-Length: ###
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>properties</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A JSON Object containing user-annotated properties as key-value pairs.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>JSON Object</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Zero-to-one</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>observedArea</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
@@ -9933,67 +10012,11 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-01-24</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2018-10-12</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0.1</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to the Calgary and Tokyo TC SWG meeting. Changed trajectory to HistoricalLocation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-02-24</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Carl Reed</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Major edit and alignment with OGC document template.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-04-11</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to the Barcelona TC SWG meeting. Changed ComplexDatastream to MultiDatastream.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-05-11</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9.1</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to the OGC Architecture Board meeting on May 5<sup>th</sup> 2015. Added requirement classes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-06-11</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9.2</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to the OGC Architecture Board meeting on May 19<sup>th</sup> 2015. Revised requirement classes to follow the OGC Naming Authority. Changed common properties to common control information. Added support to server-side pagination for expanded related entities.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-08-24</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9.3</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to the RFC comments. Added requirement classes. Added dependencies. Added a section to describe the relationship between this specification and O&amp;M as well as OData.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2015-10-26</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to the OGC Architecture Board meeting on October 12<sup>th</sup> 2015. Updated a section to explain the design decision of choosing the OData KVP encoding rather than OGC KVP encoding.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2016-05-19</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Liang</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Many.</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Updated according to comments received from the OGC TC approval vote and Washington DC TC SWG meeting.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2016-06-30</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Scott Simmons</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">All</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editing for final publication</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Properties field is added to all the entities.</p></td>
 </tr>
 </tbody>
 </table>
@@ -10035,7 +10058,7 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-10-12 09:32:33 UTC
+Last updated 2018-10-15 08:33:38 UTC
 </div>
 </div>
 </body>
