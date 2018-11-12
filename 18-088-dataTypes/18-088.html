@@ -2114,7 +2114,7 @@ example: <code>2007-03-01T13%3A00%3A00Z%2F2008-05-11T15%3A30%3A00%2B00%3A00</cod
 <div class="sect3">
 <h4 id="any-special"><a class="anchor" href="#any-special"></a>7.8.1. Special Issues with Data Type Any</h4>
 <div class="paragraph">
-<p>A SensorThings API service MUST return values of properties of the data type Any using the same JSON data type used to set (insert/update) the value of the property.</p>
+<p>A SensorThings API service MUST return values of properties of the data type Any using the same JSON data type used to set (insert/update) the value of the property. If the service does not support the JSON data type of the value the user tries to set the property to, the service MUST return an error.</p>
 </div>
 </div>
 </div>
@@ -6207,6 +6207,9 @@ its representation is format-specific. The final partial set of items SHALL NOT 
 </div>
 <div class="paragraph">
 <p>Special case #2: In the context of IoT, many Observations’ resultTime and phenomenonTime cannot be distinguished or the resultTime is not available. In this case, when a client creates an Observation entity, the client MAY omit the resultTime and the service SHOULD assign a null value to the resultTime.</p>
+</div>
+<div class="paragraph">
+<p>Special case #3: When the user tries to set a property of type Any to a value with a type the server does not support, the server must respond with HTTP status code 501 Not Implemented.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -10301,7 +10304,7 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-11-09 13:12:03 UTC
+Last updated 2018-11-12 17:12:45 UTC
 </div>
 </div>
 </body>
