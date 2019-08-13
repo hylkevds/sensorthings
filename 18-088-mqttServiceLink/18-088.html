@@ -1428,6 +1428,12 @@ The text in the <em>Requirements</em> column in the following table is the path 
 <li>
 <p>req/<a href="#requirement-create-update-delete-historical-location-auto-creation">create-update-delete/historical-location-auto-creation</a></p>
 </li>
+<li>
+<p>req/<a href="#requirement-create-update-delete-update-entity-put">create-update-delete/update-entity-put</a></p>
+</li>
+<li>
+<p>req/<a href="#requirement-create-update-delete-update-entity-jsonpatch">create-update-delete/update-entity-jsonpatch</a></p>
+</li>
 </ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Creating, updating, and deleting entities</p></td>
@@ -4275,7 +4281,7 @@ The value of the property named <code>serverSettings</code> SHALL be a JSON Obje
  [Adapted from OData 4.0-JSON-Format section 5]</p>
 </div>
 <div class="paragraph">
-<p>The <code>serverSettings</code> object SHALL contain the property <code>conformance</code> of the type Array, containing the URIs of all conformance classes from this specification and any extensions that the service implements.
+<p>The <code>serverSettings</code> object SHALL contain the property <code>conformance</code> of the type Array, containing the URIs of all requirements from this specification and any extensions that the service implements.
 If a service implements all requirements from a requirements class, it only needs to list the requirements class id.</p>
 </div>
 <div class="paragraph">
@@ -10113,7 +10119,7 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-08-13 13:19:46 UTC
+Last updated 2019-08-13 13:28:10 UTC
 </div>
 </div>
 <style>
