@@ -2228,20 +2228,20 @@ CRUD::Create, Read, Update, and Delete</p>
 <div class="listingblock">
 <div class="title">Example 1 an example of a Thing entity:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Things(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Locations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Things(1)/Locations&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Things(1)/Datastreams&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;HistoricalLocations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Things(1)/HistoricalLocations&quot;</span><span class="tok-p">,</span>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/Things(1)",
+  "Locations@iot.navigationLink": "Things(1)/Locations",
+  "Datastreams@iot.navigationLink": "Things(1)/Datastreams",
+  "HistoricalLocations@iot.navigationLink": "Things(1)/HistoricalLocations",
 
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Oven&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This thing is an oven.&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;properties&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;owner&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Noah Liang&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;color&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Black&quot;</span>
-  <span class="tok-p">}</span>
-<span class="tok-p">}</span></code></pre>
+  "name": "Oven",
+  "description": "This thing is an oven.",
+  "properties": {
+    "owner": "Noah Liang",
+    "color": "Black"
+  }
+}</code></pre>
 </div>
 </div>
 </div>
@@ -2481,23 +2481,23 @@ CRUD::Create, Read, Update, and Delete</p>
 <div class="listingblock">
 <div class="title">Example 2 an example of a Location entity:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Locations(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Things@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Locations(1)/Things&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;HistoricalLocations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Locations(1)/HistoricalLocations&quot;</span><span class="tok-p">,</span>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/Locations(1)",
+  "Things@iot.navigationLink": "Locations(1)/Things",
+  "HistoricalLocations@iot.navigationLink": "Locations(1)/HistoricalLocations",
 
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;CCIT&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Calgary Center for Innvative Technologies&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;encodingType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;application/vnd.geo+json&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;location&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Feature&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;geometry&quot;</span><span class="tok-p">:{</span>
-      <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Point&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span><span class="tok-mf">-114.06</span><span class="tok-p">,</span><span class="tok-mf">51.05</span><span class="tok-p">]</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">}</span>
-<span class="tok-p">}</span></code></pre>
+  "name": "CCIT",
+  "description": "Calgary Center for Innvative Technologies",
+  "encodingType": "application/vnd.geo+json",
+  "location": {
+    "type": "Feature",
+    "geometry":{
+      "type": "Point",
+      "coordinates": [-114.06,51.05]
+    }
+  }
+}</code></pre>
 </div>
 </div>
 <table id="tab-encodingtype-codes" class="tableblock frame-all grid-all stretch">
@@ -2730,25 +2730,25 @@ CRUD::Create, Read, Update, and Delete</p>
 <div class="listingblock">
 <div class="title">Example 3: An example of a HistoricalLocations entity set (e.g., Things(1)/HistoricalLocations)</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/HistoricalLocations(1)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Locations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;HistoricalLocations(1)/Locations&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Thing@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;HistoricalLocations(1)/Thing&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;time&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2015-01-25T12:00:00-07:00&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">2</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/HistoricalLocations(2)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Locations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;HistoricalLocations(2)/Locations&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Thing@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;HistoricalLocations(2)/Thing&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;time&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2015-01-25T13:00:00-07:00&quot;</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">],</span>
-  <span class="tok-nt">&quot;@iot.nextLink&quot;</span><span class="tok-p">:</span><span class="tok-s2">&quot;http://example.org/v1.0/Things(1)/HistoricalLocations?$skip=2&amp;$top=2&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "value": [
+    {
+      "@iot.id": 1,
+      "@iot.selfLink": "http://example.org/v1.0/HistoricalLocations(1)",
+      "Locations@iot.navigationLink": "HistoricalLocations(1)/Locations",
+      "Thing@iot.navigationLink": "HistoricalLocations(1)/Thing",
+      "time": "2015-01-25T12:00:00-07:00"
+    },
+    {
+      "@iot.id": 2,
+      "@iot.selfLink": "http://example.org/v1.0/HistoricalLocations(2)",
+      "Locations@iot.navigationLink": "HistoricalLocations(2)/Locations",
+      "Thing@iot.navigationLink": "HistoricalLocations(2)/Thing",
+      "time": "2015-01-25T13:00:00-07:00"
+    }
+  ],
+  "@iot.nextLink":"http://example.org/v1.0/Things(1)/HistoricalLocations?$skip=2&amp;$top=2"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -3061,29 +3061,29 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example 4: A Datastream entity example</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Datastreams(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Thing@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;HistoricalLocations(1)/Thing&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Sensor@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Datastreams(1)/Sensor&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;ObservedProperty@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Datastreams(1)/ObservedProperty&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Observations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Datastreams(1)/Observations&quot;</span><span class="tok-p">,</span>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/Datastreams(1)",
+  "Thing@iot.navigationLink": "HistoricalLocations(1)/Thing",
+  "Sensor@iot.navigationLink": "Datastreams(1)/Sensor",
+  "ObservedProperty@iot.navigationLink": "Datastreams(1)/ObservedProperty",
+  "Observations@iot.navigationLink": "Datastreams(1)/Observations",
 
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;oven temperature&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is a datastream measuring the air temperature in an oven.&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;unitOfMeasurement&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;degree Celsius&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;symbol&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;°C&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://unitsofmeasure.org/ucum.html#para-30&quot;</span>
-  <span class="tok-p">},</span>
-  <span class="tok-nt">&quot;observationType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;observedArea&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Polygon&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[[[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">],[</span><span class="tok-mi">101</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">],[</span><span class="tok-mi">101</span><span class="tok-p">,</span><span class="tok-mi">1</span><span class="tok-p">],[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">1</span><span class="tok-p">],[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">]]]</span>
-  <span class="tok-p">},</span>
-  <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-03-01T13:00:00Z/2015-05-11T15:30:00Z&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;resultTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-03-01T13:00:00Z/2015-05-11T15:30:00Z&quot;</span>
-<span class="tok-p">}</span></code></pre>
+  "name": "oven temperature",
+  "description": "This is a datastream measuring the air temperature in an oven.",
+  "unitOfMeasurement": {
+    "name": "degree Celsius",
+    "symbol": "°C",
+    "definition": "http://unitsofmeasure.org/ucum.html#para-30"
+  },
+  "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+  "observedArea": {
+    "type": "Polygon",
+    "coordinates": [[[100,0],[101,0],[101,1],[100,1],[100,0]]]
+  },
+  "phenomenonTime": "2014-03-01T13:00:00Z/2015-05-11T15:30:00Z",
+  "resultTime": "2014-03-01T13:00:00Z/2015-05-11T15:30:00Z"
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3407,16 +3407,16 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example 5: An example of a Sensor entity</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Sensors(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Sensors(1)/Datastreams&quot;</span><span class="tok-p">,</span>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/Sensors(1)",
+  "Datastreams@iot.navigationLink": "Sensors(1)/Datastreams",
 
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;TMP36&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;TMP36 - Analog Temperature sensor&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;encodingType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;application/pdf&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;metadata&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/TMP35_36_37.pdf&quot;</span>
-<span class="tok-p">}</span></code></pre>
+  "name": "TMP36",
+  "description": "TMP36 - Analog Temperature sensor",
+  "encodingType": "application/pdf",
+  "metadata": "http://example.org/TMP35_36_37.pdf"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -3625,18 +3625,18 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example 6: an example ObservedProperty entity</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(1)/Datastreams&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;The dewpoint temperature is the temperature to which the</span>
-<span class="tok-s2">                  air must be cooled, at constant pressure, for dew to form.</span>
-<span class="tok-s2">                  As the grass and other objects near the ground cool to</span>
-<span class="tok-s2">                  the dewpoint, some of the water vapor in the atmosphere</span>
-<span class="tok-s2">                  condenses into liquid water on the objects.&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;DewPoint Temperature&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://dbpedia.org/page/Dew_point&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/ObservedProperties(1)",
+  "Datastreams@iot.navigationLink": "ObservedProperties(1)/Datastreams",
+  "description": "The dewpoint temperature is the temperature to which the
+                  air must be cooled, at constant pressure, for dew to form.
+                  As the grass and other objects near the ground cool to
+                  the dewpoint, some of the water vapor in the atmosphere
+                  condenses into liquid water on the objects.",
+  "name": "DewPoint Temperature",
+  "definition": "http://dbpedia.org/page/Dew_point"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -3898,16 +3898,16 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example 7  An Observation entity example - The following example shows an Observation whose Datastream has an ObservationType of OM_Measurement. A result’s data type is defined by the observationType.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Observations(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;FeatureOfInterest@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Observations(1)/FeatureOfInterest&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Datastream@iot.navigationLink&quot;</span><span class="tok-p">:</span><span class="tok-s2">&quot;Observations(1)/Datastream&quot;</span><span class="tok-p">,</span>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/Observations(1)",
+  "FeatureOfInterest@iot.navigationLink": "Observations(1)/FeatureOfInterest",
+  "Datastream@iot.navigationLink":"Observations(1)/Datastream",
 
-  <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-12-31T11:59:59.00+08:00&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;resultTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-12-31T11:59:59.00+08:00&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;result&quot;</span><span class="tok-p">:</span> <span class="tok-mf">70.4</span>
-<span class="tok-p">}</span></code></pre>
+  "phenomenonTime": "2014-12-31T11:59:59.00+08:00",
+  "resultTime": "2014-12-31T11:59:59.00+08:00",
+  "result": 70.4
+}</code></pre>
 </div>
 </div>
 </div>
@@ -4133,22 +4133,22 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example 8: an example of a FeatureOfInterest entity</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/FeaturesOfInterest(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Observations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;FeaturesOfInterest(1)/Observations&quot;</span><span class="tok-p">,</span>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/FeaturesOfInterest(1)",
+  "Observations@iot.navigationLink": "FeaturesOfInterest(1)/Observations",
 
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Weather Station YYC.&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is a weather station located at the Calgary Airport.&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;encodingType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;application/vnd.geo+json&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;feature&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Feature&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;geometry&quot;</span><span class="tok-p">:{</span>
-      <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Point&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span><span class="tok-mf">-114.06</span><span class="tok-p">,</span><span class="tok-mf">51.05</span><span class="tok-p">]</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">}</span>
-<span class="tok-p">}</span></code></pre>
+  "name": "Weather Station YYC.",
+  "description": "This is a weather station located at the Calgary Airport.",
+  "encodingType": "application/vnd.geo+json",
+  "feature": {
+    "type": "Feature",
+    "geometry":{
+      "type": "Point",
+      "coordinates": [-114.06,51.05]
+    }
+  }
+}</code></pre>
 </div>
 </div>
 </div>
@@ -4177,10 +4177,10 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example 9: complete URI example</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">http://example.org/v</span><span class="tok-mf">1.0</span><span class="tok-err">/Observations?$orderby=ID&amp;$top=</span><span class="tok-mi">10</span>
-<span class="tok-err">_______________________/___________/___________________/</span>
-          <span class="tok-err">|</span>                 <span class="tok-err">|</span>               <span class="tok-err">|</span>
-  <span class="tok-err">service</span> <span class="tok-err">root</span> <span class="tok-err">URI</span>     <span class="tok-err">resource</span> <span class="tok-err">path</span>   <span class="tok-err">query</span> <span class="tok-err">options</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">http://example.org/v1.0/Observations?$orderby=ID&amp;$top=10
+_______________________/___________/___________________/
+          |                 |               |
+  service root URI     resource path   query options</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4280,38 +4280,38 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Things&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Things&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Locations&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Locations&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Datastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Datastreams&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Sensors&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Sensors&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Observations&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Observations&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;FeaturesOfInterest&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/FeaturesOfInterest&quot;</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "value": [
+    {
+      "name": "Things",
+      "url": "http://example.org/v1.0/Things"
+    },
+    {
+      "name": "Locations",
+      "url": "http://example.org/v1.0/Locations"
+    },
+    {
+      "name": "Datastreams",
+      "url": "http://example.org/v1.0/Datastreams"
+    },
+    {
+      "name": "Sensors",
+      "url": "http://example.org/v1.0/Sensors"
+    },
+    {
+      "name": "Observations",
+      "url": "http://example.org/v1.0/Observations"
+    },
+    {
+      "name": "ObservedProperties",
+      "url": "http://example.org/v1.0/ObservedProperties"
+    },
+    {
+      "name": "FeaturesOfInterest",
+      "url": "http://example.org/v1.0/FeaturesOfInterest"
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -4351,32 +4351,32 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.count&quot;</span><span class="tok-p">:</span><span class="tok-mi">84</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties(1)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(1)/Datastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;The dew point is the temperature at which the water</span>
-<span class="tok-s2">                      vapor in air at constant barometric pressure condenses</span>
-<span class="tok-s2">                      into liquid water at the same rate at which it evaporates.&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;DewPoint Temperature&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://dbpedia.org/page/Dew_point&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id &quot;</span><span class="tok-p">:</span> <span class="tok-mi">2</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties(2)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(2)/Datastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Relative humidity is the ratio of the partial pressure</span>
-<span class="tok-s2">                      of water vapor in an air-water mixture to the saturated</span>
-<span class="tok-s2">                      vapor pressure of water at a prescribed temperature.&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Relative Humidity&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://dbpedia.org/page/Relative_humidity&quot;</span>
-    <span class="tok-p">},{</span><span class="tok-err">…</span><span class="tok-p">},{</span><span class="tok-err">…</span><span class="tok-p">},{</span><span class="tok-err">…</span><span class="tok-p">}</span>
-  <span class="tok-p">],</span>
-  <span class="tok-nt">&quot;@iot.nextLink&quot;</span><span class="tok-p">:</span><span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties?$top=5&amp;$skip=5&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.count":84,
+  "value": [
+    {
+      "@iot.id": 1,
+      "@iot.selfLink": "http://example.org/v1.0/ObservedProperties(1)",
+      "Datastreams@iot.navigationLink": "ObservedProperties(1)/Datastreams",
+      "description": "The dew point is the temperature at which the water
+                      vapor in air at constant barometric pressure condenses
+                      into liquid water at the same rate at which it evaporates.",
+      "name": "DewPoint Temperature",
+      "definition": "http://dbpedia.org/page/Dew_point"
+    },
+    {
+      "@iot.id ": 2,
+      "@iot.selfLink": "http://example.org/v1.0/ObservedProperties(2)",
+      "Datastreams@iot.navigationLink": "ObservedProperties(2)/Datastreams",
+      "description": "Relative humidity is the ratio of the partial pressure
+                      of water vapor in an air-water mixture to the saturated
+                      vapor pressure of water at a prescribed temperature.",
+      "name": "Relative Humidity",
+      "definition": "http://dbpedia.org/page/Relative_humidity"
+    },{…},{…},{…}
+  ],
+  "@iot.nextLink":"http://example.org/v1.0/ObservedProperties?$top=5&amp;$skip=5"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -4436,9 +4436,9 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;resultTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2010-12-23T10:20:00-07:00&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "resultTime": "2010-12-23T10:20:00-07:00"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -4470,7 +4470,7 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span>  <span class="tok-mi">2015-01-12</span><span class="tok-err">T</span><span class="tok-mi">23</span><span class="tok-err">:</span><span class="tok-mi">00</span><span class="tok-err">:</span><span class="tok-mi">13-07</span><span class="tok-err">:</span><span class="tok-mi">00</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">  2015-01-12T23:00:13-07:00</code></pre>
 </div>
 </div>
 </div>
@@ -4527,16 +4527,16 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.selfLinks&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Observations(1)&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.selfLinks&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Observations(2)&quot;</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "value": [
+    {
+      "@iot.selfLinks": "http://example.org/v1.0/Observations(1)"
+    },
+    {
+      "@iot.selfLinks": "http://example.org/v1.0/Observations(2)"
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -4884,43 +4884,43 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;values&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Things(1)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Locations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Things(1)/Locations&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams@iot.count&quot;</span><span class="tok-p">:</span><span class="tok-mi">1</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-        <span class="tok-p">{</span>
-          <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Datastreams(1)&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;oven temperature&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is a datastream measuring the air temperature in an oven.&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;unitOfMeasurement&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-            <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;degree Celsius&quot;</span><span class="tok-p">,</span>
-            <span class="tok-nt">&quot;symbol&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;°C&quot;</span><span class="tok-p">,</span>
-            <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://unitsofmeasure.org/ucum.html#para-30&quot;</span>
-          <span class="tok-p">},</span>
-          <span class="tok-nt">&quot;observationType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;observedArea&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-            <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Polygon&quot;</span><span class="tok-p">,</span>
-            <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[[[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">],[</span><span class="tok-mi">101</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">],[</span><span class="tok-mi">101</span><span class="tok-p">,</span><span class="tok-mi">1</span><span class="tok-p">],[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">1</span><span class="tok-p">],[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">]]]</span>
-          <span class="tok-p">},</span>
-          <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-03-01T13:00:00Z/2015-05-11T15:30:00Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;resultTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-03-01T13:00:00Z/2015-05-11T15:30:00Z&quot;</span>
-        <span class="tok-p">}</span>
-      <span class="tok-p">],</span>
-      <span class="tok-nt">&quot;HistoricalLocations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Things(1)/HistoricalLocations&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This thing is a convection oven.&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Oven&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;properties&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-        <span class="tok-nt">&quot;owner&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;John Doe&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;color&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Silver&quot;</span>
-      <span class="tok-p">}</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "values": [
+    {
+      "@iot.id": 1,
+      "@iot.selfLink": "http://example.org/v1.0/Things(1)",
+      "Locations@iot.navigationLink": "Things(1)/Locations",
+      "Datastreams@iot.count":1,
+      "Datastreams": [
+        {
+          "@iot.id": 1,
+          "@iot.selfLink": "http://example.org/v1.0/Datastreams(1)",
+          "name": "oven temperature",
+          "description": "This is a datastream measuring the air temperature in an oven.",
+          "unitOfMeasurement": {
+            "name": "degree Celsius",
+            "symbol": "°C",
+            "definition": "http://unitsofmeasure.org/ucum.html#para-30"
+          },
+          "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+          "observedArea": {
+            "type": "Polygon",
+            "coordinates": [[[100,0],[101,0],[101,1],[100,1],[100,0]]]
+          },
+          "phenomenonTime": "2014-03-01T13:00:00Z/2015-05-11T15:30:00Z",
+          "resultTime": "2014-03-01T13:00:00Z/2015-05-11T15:30:00Z"
+        }
+      ],
+      "HistoricalLocations@iot.navigationLink": "Things(1)/HistoricalLocations",
+      "description": "This thing is a convection oven.",
+      "name": "Oven",
+      "properties": {
+        "owner": "John Doe",
+        "color": "Silver"
+      }
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5272,13 +5272,13 @@ see <a href="#tab-value-codes-obstypes">Table 12</a>.</p>
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.count&quot;</span><span class="tok-p">:</span> <span class="tok-mi">2</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span><span class="tok-err">…</span><span class="tok-p">},</span>
-    <span class="tok-p">{</span><span class="tok-err">…</span><span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.count": 2,
+  "value": [
+    {…},
+    {…}
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -5760,13 +5760,13 @@ its representation is format-specific. The final partial set of items SHALL NOT 
 <div class="listingblock">
 <div class="title">Example Response:</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span><span class="tok-err">…</span><span class="tok-p">},</span>
-    <span class="tok-p">{</span><span class="tok-err">…</span><span class="tok-p">}</span>
-  <span class="tok-p">],</span>
-  <span class="tok-nt">&quot;@iot.nextLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://examples.org/v1.0/Things?$top=100&amp;$skip=100&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "value": [
+    {…},
+    {…}
+  ],
+  "@iot.nextLink": "http://examples.org/v1.0/Things?$top=100&amp;$skip=100"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -6047,14 +6047,14 @@ its representation is format-specific. The final partial set of items SHALL NOT 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>POST /v1.0/Things HTTP/1.1
+<pre class="pygments highlight"><code>POST /v1.0/Things HTTP/1.1
 
 Host: example.org/
 Content-Type: application/json
 
 {
-  &quot;name&quot;: &quot;thermostat&quot;,
-  &quot;description&quot;:&quot;This is a smart thermostat with WiFi communication capabilities.&quot;
+  "name": "thermostat",
+  "description":"This is a smart thermostat with WiFi communication capabilities."
 }</code></pre>
 </div>
 </div>
@@ -6093,20 +6093,20 @@ Content-Type: application/json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">POST</span> <span class="tok-err">/v</span><span class="tok-mf">1.0</span><span class="tok-err">/Observations</span> <span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span>
-<span class="tok-err">Host:</span> <span class="tok-err">example.org</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
+<pre class="pygments highlight"><code data-lang="json">POST /v1.0/Observations HTTP/1.1
+Host: example.org
+Content-Type: application/json
 
-<span class="tok-p">{</span>
-  <span class="tok-nt">&quot;Datastream&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span>
-  <span class="tok-p">},</span>
-  <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2013-04-18T16:15:00-07:00&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;result&quot;</span><span class="tok-p">:</span> <span class="tok-mi">124</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;FeatureOfInterest&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">2</span>
-  <span class="tok-p">}</span>
-<span class="tok-p">}</span></code></pre>
+{
+  "Datastream": {
+    "@iot.id": 1
+  },
+  "phenomenonTime": "2013-04-18T16:15:00-07:00",
+  "result": 124,
+  "FeatureOfInterest": {
+    "@iot.id": 2
+  }
+}</code></pre>
 </div>
 </div>
 </div>
@@ -6150,80 +6150,80 @@ Content-Type: application/json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">POST</span> <span class="tok-err">/v</span><span class="tok-mf">1.0</span><span class="tok-err">/Things</span> <span class="tok-err">HTTP</span><span class="tok-mf">1.1</span>
-<span class="tok-err">Host:</span> <span class="tok-err">example.org</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
+<pre class="pygments highlight"><code data-lang="json">POST /v1.0/Things HTTP1.1
+Host: example.org
+Content-Type: application/json
 
-<span class="tok-p">{</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This an oven with a temperature datastream.&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;oven&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Locations&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;CCIT&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Calgary Centre for Innovative Technologies&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;encodingType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;application/vnd.geo+json&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;location&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-        <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Feature&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;geometry&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-          <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Point&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span><span class="tok-mi">10</span><span class="tok-p">]</span>
-        <span class="tok-p">}</span>
-      <span class="tok-p">}</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">],</span>
-  <span class="tok-nt">&quot;Datastreams&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;oven temperature&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is a datastream for an oven’s internal temperature.&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;unitOfMeasurement&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-        <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;degree Celsius&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;symbol&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;°C&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://unitsofmeasure.org/ucum.html#para-30&quot;</span>
-      <span class="tok-p">},</span>
-      <span class="tok-nt">&quot;observationType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;observedArea&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-        <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Polygon&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[[[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">101</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">101</span><span class="tok-p">,</span><span class="tok-mi">1</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">1</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">]]]</span>
-      <span class="tok-p">},</span>
-      <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2009-01-11T16:22:25.00Z/2011-08-21T08:32:10.00Z&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Observations&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-        <span class="tok-p">{</span>
-          <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2012-06-26T03:42:02-0600&quot;</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;result&quot;</span><span class="tok-p">:</span> <span class="tok-mf">70.4</span><span class="tok-p">,</span>
-          <span class="tok-nt">&quot;FeatureOfInterest&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-            <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;CCIT #361&quot;</span><span class="tok-p">,</span>
-            <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is CCIT #361, Noah’s dad’s office&quot;</span><span class="tok-p">,</span>
-            <span class="tok-nt">&quot;encodingType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;application/vnd.geo+json&quot;</span><span class="tok-p">,</span>
-            <span class="tok-nt">&quot;feature&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-              <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Feature&quot;</span><span class="tok-p">,</span>
-              <span class="tok-nt">&quot;geometry&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-                <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Polygon&quot;</span><span class="tok-p">,</span>
-                <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-                  <span class="tok-p">[[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">50</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span><span class="tok-mi">9</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">23</span><span class="tok-p">,</span><span class="tok-mi">4</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">100</span><span class="tok-p">,</span><span class="tok-mi">50</span><span class="tok-p">]],</span> <span class="tok-p">[[</span><span class="tok-mi">30</span><span class="tok-p">,</span><span class="tok-mi">20</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span><span class="tok-mi">4</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">4</span><span class="tok-p">,</span><span class="tok-mi">22</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">30</span><span class="tok-p">,</span><span class="tok-mi">20</span><span class="tok-p">]]</span>
-                <span class="tok-p">]</span>
-              <span class="tok-p">}</span>
-            <span class="tok-p">}</span>
-          <span class="tok-p">}</span>
-        <span class="tok-p">}</span>
-      <span class="tok-p">],</span>
-      <span class="tok-nt">&quot;ObservedProperty&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-        <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;DewPoint Temperature&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://sweet.jpl.nasa.gov/ontology/property.owl#DewPointTemperature&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;The dewpoint temperature is the temperature to which the air</span>
-<span class="tok-s2">                        must be cooled, at constant pressure, for dew to form. As</span>
-<span class="tok-s2">                        the grass and other objects near the ground cool to the</span>
-<span class="tok-s2">                        dewpoint, some of the water vapor in the atmosphere</span>
-<span class="tok-s2">                        condenses into liquid water on the objects.&quot;</span>
-      <span class="tok-p">},</span>
-      <span class="tok-nt">&quot;Sensor&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-        <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;DS18B20&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;DS18B20 is an air temperature sensor…&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;encodingType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;application/pdf&quot;</span><span class="tok-p">,</span>
-        <span class="tok-nt">&quot;metadata&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf&quot;</span>
-      <span class="tok-p">}</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+{
+  "description": "This an oven with a temperature datastream.",
+  "name": "oven",
+  "Locations": [
+    {
+      "name": "CCIT",
+      "description": "Calgary Centre for Innovative Technologies",
+      "encodingType": "application/vnd.geo+json",
+      "location": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10,10]
+        }
+      }
+    }
+  ],
+  "Datastreams": [
+    {
+      "name": "oven temperature",
+      "description": "This is a datastream for an oven’s internal temperature.",
+      "unitOfMeasurement": {
+        "name": "degree Celsius",
+        "symbol": "°C",
+        "definition": "http://unitsofmeasure.org/ucum.html#para-30"
+      },
+      "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+      "observedArea": {
+        "type": "Polygon",
+        "coordinates": [[[100,0], [101,0], [101,1], [100,1], [100,0]]]
+      },
+      "phenomenonTime": "2009-01-11T16:22:25.00Z/2011-08-21T08:32:10.00Z",
+      "Observations": [
+        {
+          "phenomenonTime": "2012-06-26T03:42:02-0600",
+          "result": 70.4,
+          "FeatureOfInterest": {
+            "name": "CCIT #361",
+            "description": "This is CCIT #361, Noah’s dad’s office",
+            "encodingType": "application/vnd.geo+json",
+            "feature": {
+              "type": "Feature",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [[100,50], [10,9], [23,4], [100,50]], [[30,20], [10,4], [4,22], [30,20]]
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "ObservedProperty": {
+        "name": "DewPoint Temperature",
+        "definition": "http://sweet.jpl.nasa.gov/ontology/property.owl#DewPointTemperature",
+        "description": "The dewpoint temperature is the temperature to which the air
+                        must be cooled, at constant pressure, for dew to form. As
+                        the grass and other objects near the ground cool to the
+                        dewpoint, some of the water vapor in the atmosphere
+                        condenses into liquid water on the objects."
+      },
+      "Sensor": {
+        "name": "DS18B20",
+        "description": "DS18B20 is an air temperature sensor…",
+        "encodingType": "application/pdf",
+        "metadata": "http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf"
+      }
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -6334,12 +6334,12 @@ Content-Type: application/json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>PATCH /v1.0/Things(1) HTTP1.1
+<pre class="pygments highlight"><code>PATCH /v1.0/Things(1) HTTP1.1
 Host: example.org
 Content-Type: application/json
 
 {
-  &quot;description&quot;:&quot;This thing is an oven.&quot;
+  "description":"This thing is an oven."
 }</code></pre>
 </div>
 </div>
@@ -6406,7 +6406,7 @@ Content-Type: application/json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>DELETE http://example.org/v1.0/Things(1)</code></pre>
+<pre class="pygments highlight"><code>DELETE http://example.org/v1.0/Things(1)</code></pre>
 </div>
 </div>
 <table id="tab-integrity-deleting" class="tableblock frame-all grid-all fit-content">
@@ -6585,7 +6585,7 @@ and all subsections. The only difference is that the OData-Version header SHOULD
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>POST /v1.0/$batch HTTP/1.1
+<pre class="pygments highlight"><code>POST /v1.0/$batch HTTP/1.1
 Host: example.org
 Content-Type: multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b
 
@@ -6597,8 +6597,8 @@ Content-Type: multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>  ( ) &lt; &gt; @
-  , ; :  / &quot; [ ] ? =</code></pre>
+<pre class="pygments highlight"><code>  ( ) &lt; &gt; @
+  , ; :  / " [ ] ? =</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -6641,7 +6641,7 @@ Content-Type: multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>POST /v1.0/$batch HTTP/1.1
+<pre class="pygments highlight"><code>POST /v1.0/$batch HTTP/1.1
 Host: host
 Content-Type: multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b
 Content-Length: ###
@@ -6699,51 +6699,65 @@ Host: host
 <div class="sect3">
 <h4 id="referencing-new-entities-in-change-set"><a class="anchor" href="#referencing-new-entities-in-change-set"></a>11.2.2. Referencing new entities in a change set example</h4>
 <div class="paragraph">
+<p>Create and update actions inside a change set can reference entities previously created inside the same change set.
+To make a created entity referenceable, the POST that creates the entity must have a Content-ID header, the content of which can be any string.
+Subsequent requests in the same change set can now use the value of this header, prefixed with a <code>$</code>, in places where the ID of the created entity is required.
+To ensure valid JSON, the resulting value will have to be encoded as a string.</p>
+</div>
+<div class="paragraph">
 <p><strong>Example 31-3:</strong> A Batch Request that contains the following operations in the order listed:</p>
 </div>
 <div class="paragraph">
-<p>A change set that contains the following requests:</p>
+<p>A batch request, containing a single change set that contains the following requests:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Insert a new Datastream entity (with Content-ID = 1)</p>
+<p>Insert a new Sensor entity (with <code>Content-ID = sensor1</code>)</p>
 </li>
 <li>
-<p>Insert a second new entity, a Sensor entity in this example (reference request with Content-ID = 1)</p>
+<p>Insert a new Datastream entity, referencing the previously created Sensor entity as <code>"$sensor1"</code>.</p>
 </li>
 </ol>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>POST /v1.0/$batch HTTP/1.1
+<pre class="pygments highlight"><code>POST /v1.0/$batch HTTP/1.1
 Host: host
-Content-Type:
-multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b
+Content-Type: multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b
 
 --batch_36522ad7-fc75-4b56-8c71-56071383e77b
 Content-Type: multipart/mixed;boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd
 
 --changeset_77162fcd-b8da-41ac-a9f8-9357efbbd
 Content-Type: application/http
-Content-ID: 1
+Content-ID: sensor1
 
-POST /v1.0/Datastreams HTTP/1.1
+POST /v1.0/Sensors HTTP/1.1
 Host: host
 Content-Type: application/json
 Content-Length: ###
 
-&lt;JSON representation of a new Datastream&gt;
+{
+  "name": "DS18B20",
+  "description": "DS18B20 is an air temperature sensor",
+  "encodingType": "application/pdf",
+  "metadata": "http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf"
+}
 --changeset_77162fcd-b8da-41ac-a9f8-9357efbbd
 Content-Type: application/http
-Content-ID: 2
 
-POST /v1.0/Sensor HTTP/1.1
+POST /v1.0/Things(5)/Datastreams HTTP/1.1
 Host: host
 Content-Type: application/json
 Content-Length: ###
 
-&lt;JSON representation of a new Sensor&gt;
+{
+  "name": "Temperature Thing 5",
+  "description": "The temperature of thing 5",
+  "ObservedProperty: {"@iot.id": 12},
+  "Sensor": {"@iot.id": "$sensor1"}
+}
 --changeset_77162fcd-b8da-41ac-a9f8-9357efbbd--
 --batch_36522ad7-fc75-4b56-8c71-56071383e77b--</code></pre>
 </div>
@@ -6757,51 +6771,51 @@ Content-Length: ###
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span>
-<span class="tok-mi">200</span> <span class="tok-err">Ok</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">####</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">multipart/mixed;boundary=b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
+<pre class="pygments highlight"><code data-lang="json">HTTP/1.1
+200 Ok
+Content-Length: ####
+Content-Type: multipart/mixed;boundary=b_243234_25424_ef_892u748
 
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
+--b_243234_25424_ef_892u748
+Content-Type: application/http
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">200</span> <span class="tok-err">Ok</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">###</span>
+HTTP/1.1 200 Ok
+Content-Type: application/json
+Content-Length: ###
 
-<span class="tok-err">&lt;JSON</span> <span class="tok-err">representation</span> <span class="tok-err">of</span> <span class="tok-err">the</span> <span class="tok-err">Thing</span> <span class="tok-err">entity</span> <span class="tok-err">with</span> <span class="tok-err">id</span> <span class="tok-err">=</span> <span class="tok-mi">1</span><span class="tok-err">&gt;</span>
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">multipart/mixed;boundary=cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span>
+&lt;JSON representation of the Thing entity with id = 1&gt;
+--b_243234_25424_ef_892u748
+Content-Type: multipart/mixed;boundary=cs_12u7hdkin252452345eknd_383673037
 
-<span class="tok-err">--cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
-<span class="tok-err">Content-ID:</span> <span class="tok-mi">1</span>
+--cs_12u7hdkin252452345eknd_383673037
+Content-Type: application/http
+Content-ID: 1
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">201</span> <span class="tok-err">Created</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
-<span class="tok-err">Location:</span> <span class="tok-err">http://host/v</span><span class="tok-mf">1.0</span><span class="tok-err">/Things(</span><span class="tok-mi">99</span><span class="tok-err">)</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">###</span>
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: http://host/v1.0/Things(99)
+Content-Length: ###
 
-<span class="tok-err">&lt;JSON</span> <span class="tok-err">representation</span> <span class="tok-err">of</span> <span class="tok-err">a</span> <span class="tok-err">new</span> <span class="tok-err">Thing</span> <span class="tok-err">entity&gt;</span>
+&lt;JSON representation of a new Thing entity&gt;
 
-<span class="tok-err">--cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
-<span class="tok-err">Content-ID:</span> <span class="tok-mi">2</span>
+--cs_12u7hdkin252452345eknd_383673037
+Content-Type: application/http
+Content-ID: 2
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">204</span> <span class="tok-err">No</span> <span class="tok-err">Content</span>
-<span class="tok-err">Host:</span> <span class="tok-err">host</span>
+HTTP/1.1 204 No Content
+Host: host
 
 
-<span class="tok-err">--cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span><span class="tok-err">--</span>
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
+--cs_12u7hdkin252452345eknd_383673037--
+--b_243234_25424_ef_892u748
+Content-Type: application/http
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">404</span> <span class="tok-err">Not</span> <span class="tok-err">Found</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">###</span>
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+Content-Length: ###
 
-<span class="tok-err">&lt;Error</span> <span class="tok-err">message&gt;</span>
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span><span class="tok-err">--</span></code></pre>
+&lt;Error message&gt;
+--b_243234_25424_ef_892u748--</code></pre>
 </div>
 </div>
 </div>
@@ -6812,27 +6826,27 @@ Content-Length: ###
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">200</span> <span class="tok-err">Ok</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">####</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">multipart/mixed;boundary=b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
+<pre class="pygments highlight"><code data-lang="json">HTTP/1.1 200 Ok
+Content-Length: ####
+Content-Type: multipart/mixed;boundary=b_243234_25424_ef_892u748
 
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
+--b_243234_25424_ef_892u748
+Content-Type: application/http
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">200</span> <span class="tok-err">Ok</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">###</span>
+HTTP/1.1 200 Ok
+Content-Type: application/json
+Content-Length: ###
 
-<span class="tok-err">&lt;JSON</span> <span class="tok-err">representation</span> <span class="tok-err">of</span> <span class="tok-err">the</span> <span class="tok-err">Thing</span> <span class="tok-err">entity</span> <span class="tok-err">with</span> <span class="tok-err">id</span> <span class="tok-err">=</span> <span class="tok-mi">1</span><span class="tok-err">&gt;</span>
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
+&lt;JSON representation of the Thing entity with id = 1&gt;
+--b_243234_25424_ef_892u748
+Content-Type: application/http
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">202</span> <span class="tok-err">Accepted</span>
-<span class="tok-err">Location:</span> <span class="tok-err">http://service-root/async-monitor</span>
-<span class="tok-err">Retry-After:</span> <span class="tok-err">###</span>
+HTTP/1.1 202 Accepted
+Location: http://service-root/async-monitor
+Retry-After: ###
 
 
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span><span class="tok-err">--</span></code></pre>
+--b_243234_25424_ef_892u748--</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6840,41 +6854,41 @@ Content-Length: ###
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">200</span> <span class="tok-err">Ok</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">####</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">multipart/mixed;boundary=b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
+<pre class="pygments highlight"><code data-lang="json">HTTP/1.1 200 Ok
+Content-Length: ####
+Content-Type: multipart/mixed;boundary=b_243234_25424_ef_892u748
 
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">multipart/mixed;boundary=cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span>
+--b_243234_25424_ef_892u748
+Content-Type: multipart/mixed;boundary=cs_12u7hdkin252452345eknd_383673037
 
-<span class="tok-err">--cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
-<span class="tok-err">Content-ID:</span> <span class="tok-mi">1</span>
+--cs_12u7hdkin252452345eknd_383673037
+Content-Type: application/http
+Content-ID: 1
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">201</span> <span class="tok-err">Created</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
-<span class="tok-err">Location:</span> <span class="tok-err">http://host/v</span><span class="tok-mf">1.0</span><span class="tok-err">/Things(</span><span class="tok-mi">99</span><span class="tok-err">)</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">###</span>
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: http://host/v1.0/Things(99)
+Content-Length: ###
 
-<span class="tok-err">&lt;JSON</span> <span class="tok-err">representation</span> <span class="tok-err">of</span> <span class="tok-err">a</span> <span class="tok-err">new</span> <span class="tok-err">Thing</span> <span class="tok-err">entity&gt;</span>
-<span class="tok-err">--cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
-<span class="tok-err">Content-ID:</span> <span class="tok-mi">2</span>
+&lt;JSON representation of a new Thing entity&gt;
+--cs_12u7hdkin252452345eknd_383673037
+Content-Type: application/http
+Content-ID: 2
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">204</span> <span class="tok-err">No</span> <span class="tok-err">Content</span>
-<span class="tok-err">Host:</span> <span class="tok-err">host</span>
+HTTP/1.1 204 No Content
+Host: host
 
 
-<span class="tok-err">--cs_</span><span class="tok-mi">12</span><span class="tok-err">u</span><span class="tok-mi">7</span><span class="tok-err">hdkin</span><span class="tok-mi">252452345</span><span class="tok-err">eknd_</span><span class="tok-mi">383673037</span><span class="tok-err">--</span>
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/http</span>
+--cs_12u7hdkin252452345eknd_383673037--
+--b_243234_25424_ef_892u748
+Content-Type: application/http
 
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">404</span> <span class="tok-err">Not</span> <span class="tok-err">Found</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
-<span class="tok-err">Content-Length:</span> <span class="tok-err">###</span>
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+Content-Length: ###
 
-<span class="tok-err">&lt;Error</span> <span class="tok-err">message&gt;</span>
-<span class="tok-err">--b_</span><span class="tok-mi">243234</span><span class="tok-err">_</span><span class="tok-mi">25424</span><span class="tok-err">_ef_</span><span class="tok-mi">892</span><span class="tok-err">u</span><span class="tok-mi">748</span><span class="tok-err">—</span></code></pre>
+&lt;Error message&gt;
+--b_243234_25424_ef_892u748—</code></pre>
 </div>
 </div>
 </div>
@@ -7277,49 +7291,49 @@ Content-Length: ###
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span> <span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/MultiDatastreams(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Thing@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;MultiDatastreams(1)/Thing&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Sensor@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;MultiDatastreams(1)/Sensor&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;ObservedProperty@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;MultiDatastreams(1)/ObservedProperties&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;Observations@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;MultiDatastreams/Observations&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;temperature, RH, visibility&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is a MultiDatastream from a simple weather station measuring air temperature, relative humidity and visibility&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;observationType&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;multiObservationDataTypes&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement&quot;</span><span class="tok-p">,</span>
-    <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement&quot;</span><span class="tok-p">,</span>
-    <span class="tok-s2">&quot;http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation&quot;</span>
-  <span class="tok-p">],</span>
-  <span class="tok-nt">&quot;unitOfMeasurements&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;degree Celsius&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;symbol&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;°C&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://unitsofmeasure.org/ucum.html#para-30&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;percent&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;symbol&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;%&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://unitsofmeasure.org/ucum.html#para-29&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;null&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;symbol&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;null&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;definition&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;null&quot;</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">],</span>
-  <span class="tok-nt">&quot;observedArea&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Polygon&quot;</span><span class="tok-p">,</span>
-    <span class="tok-nt">&quot;coordinates&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-      <span class="tok-p">[</span>
-        <span class="tok-p">[</span><span class="tok-mi">100</span><span class="tok-p">,</span> <span class="tok-mi">0</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">101</span><span class="tok-p">,</span> <span class="tok-mi">0</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">101</span><span class="tok-p">,</span> <span class="tok-mi">1</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">100</span><span class="tok-p">,</span> <span class="tok-mi">1</span><span class="tok-p">],</span> <span class="tok-p">[</span><span class="tok-mi">100</span><span class="tok-p">,</span> <span class="tok-mi">0</span><span class="tok-p">]</span>
-      <span class="tok-p">]</span>
-    <span class="tok-p">]</span>
-  <span class="tok-p">},</span>
-  <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-03-01T13:00:00Z/2015-05-11T15:30:00Z&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;resultTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-03-01T13:00:00Z/2015-05-11T15:30:00Z&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json"> {
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/MultiDatastreams(1)",
+  "Thing@iot.navigationLink": "MultiDatastreams(1)/Thing",
+  "Sensor@iot.navigationLink": "MultiDatastreams(1)/Sensor",
+  "ObservedProperty@iot.navigationLink": "MultiDatastreams(1)/ObservedProperties",
+  "Observations@iot.navigationLink": "MultiDatastreams/Observations",
+  "name": "temperature, RH, visibility",
+  "description": "This is a MultiDatastream from a simple weather station measuring air temperature, relative humidity and visibility",
+  "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation",
+  "multiObservationDataTypes": [
+    "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_CategoryObservation"
+  ],
+  "unitOfMeasurements": [
+    {
+      "name": "degree Celsius",
+      "symbol": "°C",
+      "definition": "http://unitsofmeasure.org/ucum.html#para-30"
+    },
+    {
+      "name": "percent",
+      "symbol": "%",
+      "definition": "http://unitsofmeasure.org/ucum.html#para-29"
+    },
+    {
+      "name": "null",
+      "symbol": "null",
+      "definition": "null"
+    }
+  ],
+  "observedArea": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [100, 0], [101, 0], [101, 1], [100, 1], [100, 0]
+      ]
+    ]
+  },
+  "phenomenonTime": "2014-03-01T13:00:00Z/2015-05-11T15:30:00Z",
+  "resultTime": "2014-03-01T13:00:00Z/2015-05-11T15:30:00Z"
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7327,40 +7341,40 @@ Content-Length: ###
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties(1)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(1)/Datastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;MultiDatastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(1)/ MultiDatastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;The dew point is the temperature at which the water vapor in a sample</span>
-<span class="tok-s2">                      of air at constant barometric pressure condenses into liquid water at the</span>
-<span class="tok-s2">                      same rate at which it evaporates. At temperatures below the dew point, water</span>
-<span class="tok-s2">                      will leave the air.&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Dew point temperature&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id &quot;</span><span class="tok-p">:</span> <span class="tok-mi">2</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties(2)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(2)/Datastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;MultiDatastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(2)/ MultiDatastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Relative humidity (abbreviated RH) is the ratio of the partial pressure</span>
-<span class="tok-s2">                      of water vapor to the equilibrium vapor pressure of water at the same</span>
-<span class="tok-s2">                      temperature.&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Relative Humidity&quot;</span>
-    <span class="tok-p">},</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">3</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/ObservedProperties(3)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;Datastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(3)/Datastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;MultiDatastreams@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;ObservedProperties(3)/MultiDatastreams&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Visibility is a measure of the distance at which an object or light can</span>
-<span class="tok-s2">                      be clearly discerned. &quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Visibility (Weather)&quot;</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "value": [
+    {
+      "@iot.id": 1,
+      "@iot.selfLink": "http://example.org/v1.0/ObservedProperties(1)",
+      "Datastreams@iot.navigationLink": "ObservedProperties(1)/Datastreams",
+      "MultiDatastreams@iot.navigationLink": "ObservedProperties(1)/ MultiDatastreams",
+      "description": "The dew point is the temperature at which the water vapor in a sample
+                      of air at constant barometric pressure condenses into liquid water at the
+                      same rate at which it evaporates. At temperatures below the dew point, water
+                      will leave the air.",
+      "name": "Dew point temperature"
+    },
+    {
+      "@iot.id ": 2,
+      "@iot.selfLink": "http://example.org/v1.0/ObservedProperties(2)",
+      "Datastreams@iot.navigationLink": "ObservedProperties(2)/Datastreams",
+      "MultiDatastreams@iot.navigationLink": "ObservedProperties(2)/ MultiDatastreams",
+      "description": "Relative humidity (abbreviated RH) is the ratio of the partial pressure
+                      of water vapor to the equilibrium vapor pressure of water at the same
+                      temperature.",
+      "name": "Relative Humidity"
+    },
+    {
+      "@iot.id": 3,
+      "@iot.selfLink": "http://example.org/v1.0/ObservedProperties(3)",
+      "Datastreams@iot.navigationLink": "ObservedProperties(3)/Datastreams",
+      "MultiDatastreams@iot.navigationLink": "ObservedProperties(3)/MultiDatastreams",
+      "description": "Visibility is a measure of the distance at which an object or light can
+                      be clearly discerned. ",
+      "name": "Visibility (Weather)"
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7368,19 +7382,19 @@ Content-Length: ###
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;@iot.id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;@iot.selfLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;http://example.org/v1.0/Observations(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;FeatureOfInterest@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Observations(1)/FeatureOfInterest&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;MultiDatastream@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Observations(1)/MultiDatastream&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;phenomenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-12-31T11:59:59.00+08:00&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;resultTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2014-12-31T11:59:59.00+08:00&quot;</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;result&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-mi">25</span><span class="tok-p">,</span>
-    <span class="tok-mi">65</span><span class="tok-p">,</span>
-    <span class="tok-s2">&quot;clear&quot;</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.0/Observations(1)",
+  "FeatureOfInterest@iot.navigationLink": "Observations(1)/FeatureOfInterest",
+  "MultiDatastream@iot.navigationLink": "Observations(1)/MultiDatastream",
+  "phenomenonTime": "2014-12-31T11:59:59.00+08:00",
+  "resultTime": "2014-12-31T11:59:59.00+08:00",
+  "result": [
+    25,
+    65,
+    "clear"
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -7530,45 +7544,45 @@ when requesting Observation entities. For example, <code>http://example.org/v1.0
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">GET</span> <span class="tok-err">/v</span><span class="tok-mf">1.0</span><span class="tok-err">/Datastreams(</span><span class="tok-mi">1</span><span class="tok-err">)/Observations?$resultFormat=dataArray</span>
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">200</span> <span class="tok-err">OK</span>
-<span class="tok-err">Host:</span> <span class="tok-err">www.example.org</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
+<pre class="pygments highlight"><code data-lang="json">GET /v1.0/Datastreams(1)/Observations?$resultFormat=dataArray
+HTTP/1.1 200 OK
+Host: www.example.org
+Content-Type: application/json
 
-<span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;Datastream@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;Datastreams(1)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;components&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-        <span class="tok-s2">&quot;id&quot;</span><span class="tok-p">,</span>
-        <span class="tok-s2">&quot;phenomenonTime&quot;</span><span class="tok-p">,</span>
-        <span class="tok-s2">&quot;resultTime&quot;</span><span class="tok-p">,</span>
-        <span class="tok-s2">&quot;result&quot;</span>
-      <span class="tok-p">],</span>
-      <span class="tok-nt">&quot;dataArray@iot.count&quot;</span><span class="tok-p">:</span> <span class="tok-mi">3</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;dataArray&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-        <span class="tok-p">[</span>
-          <span class="tok-mi">1</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2005-08-05T12:21:13Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2005-08-05T12:21:13Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-mi">20</span>
-        <span class="tok-p">],</span>
-        <span class="tok-p">[</span>
-          <span class="tok-mi">2</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2005-08-05T12:22:08Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2005-08-05T12:21:13Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-mi">30</span>
-        <span class="tok-p">],</span>
-        <span class="tok-p">[</span>
-          <span class="tok-mi">3</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2005-08-05T12:22:54Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2005-08-05T12:21:13Z&quot;</span><span class="tok-p">,</span>
-          <span class="tok-mi">0</span>
-        <span class="tok-p">]</span>
-      <span class="tok-p">]</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+{
+  "value": [
+    {
+      "Datastream@iot.navigationLink": "Datastreams(1)",
+      "components": [
+        "id",
+        "phenomenonTime",
+        "resultTime",
+        "result"
+      ],
+      "dataArray@iot.count": 3,
+      "dataArray": [
+        [
+          1,
+          "2005-08-05T12:21:13Z",
+          "2005-08-05T12:21:13Z",
+          20
+        ],
+        [
+          2,
+          "2005-08-05T12:22:08Z",
+          "2005-08-05T12:21:13Z",
+          30
+        ],
+        [
+          3,
+          "2005-08-05T12:22:54Z",
+          "2005-08-05T12:21:13Z",
+          0
+        ]
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7576,57 +7590,57 @@ when requesting Observation entities. For example, <code>http://example.org/v1.0
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">GET</span> <span class="tok-err">/v</span><span class="tok-mf">1.0</span><span class="tok-err">/MultiDatastreams(</span><span class="tok-mi">1</span><span class="tok-err">)/Observations?$resultFormat=dataArray</span>
-<span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span> <span class="tok-mi">200</span> <span class="tok-err">OK</span>
-<span class="tok-err">Host:</span> <span class="tok-err">www.example.org</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">**application/json</span>
+<pre class="pygments highlight"><code data-lang="json">GET /v1.0/MultiDatastreams(1)/Observations?$resultFormat=dataArray
+HTTP/1.1 200 OK
+Host: www.example.org
+Content-Type: **application/json
 
-<span class="tok-p">{</span>
-  <span class="tok-nt">&quot;value&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-    <span class="tok-p">{</span>
-      <span class="tok-nt">&quot;MultiDatastream@iot.navigationLink&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;MultiDatastreams(1)&quot;</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;components&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-        <span class="tok-s2">&quot;id&quot;</span><span class="tok-p">,</span>
-        <span class="tok-s2">&quot;phenomenonTime&quot;</span><span class="tok-p">,</span>
-        <span class="tok-s2">&quot;resultTime&quot;</span><span class="tok-p">,</span>
-        <span class="tok-s2">&quot;result&quot;</span>
-      <span class="tok-p">],</span>
-      <span class="tok-nt">&quot;dataArray@iot.count&quot;</span><span class="tok-p">:</span> <span class="tok-mi">3</span><span class="tok-p">,</span>
-      <span class="tok-nt">&quot;dataArray&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
-        <span class="tok-p">[</span>
-          <span class="tok-mi">1</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2010-12-23T11:20:00-0700&quot;</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2010-12-23T11:20:00-0700&quot;</span><span class="tok-p">,</span>
-          <span class="tok-p">[</span>
-            <span class="tok-mf">10.2</span><span class="tok-p">,</span>
-            <span class="tok-mi">65</span><span class="tok-p">,</span>
-            <span class="tok-s2">&quot;clear&quot;</span>
-          <span class="tok-p">]</span>
-        <span class="tok-p">],</span>
-        <span class="tok-p">[</span>
-          <span class="tok-mi">2</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2010-12-23T11:22:08-0700&quot;</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2010-12-23T11:20:00-0700&quot;</span><span class="tok-p">,</span>
-          <span class="tok-p">[</span>
-            <span class="tok-mf">11.3</span><span class="tok-p">,</span>
-            <span class="tok-mi">63</span><span class="tok-p">,</span>
-            <span class="tok-s2">&quot;clear&quot;</span>
-          <span class="tok-p">]</span>
-        <span class="tok-p">],</span>
-        <span class="tok-p">[</span>
-          <span class="tok-mi">3</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2010-12-23T11:22:54-0700&quot;</span><span class="tok-p">,</span>
-          <span class="tok-s2">&quot;2010-12-23T11:20:00-0700&quot;</span><span class="tok-p">,</span>
-          <span class="tok-p">[</span>
-            <span class="tok-mf">9.8</span><span class="tok-p">,</span>
-            <span class="tok-mi">67</span><span class="tok-p">,</span>
-            <span class="tok-s2">&quot;clear&quot;</span>
-          <span class="tok-p">]</span>
-        <span class="tok-p">]</span>
-      <span class="tok-p">]</span>
-    <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
+{
+  "value": [
+    {
+      "MultiDatastream@iot.navigationLink": "MultiDatastreams(1)",
+      "components": [
+        "id",
+        "phenomenonTime",
+        "resultTime",
+        "result"
+      ],
+      "dataArray@iot.count": 3,
+      "dataArray": [
+        [
+          1,
+          "2010-12-23T11:20:00-0700",
+          "2010-12-23T11:20:00-0700",
+          [
+            10.2,
+            65,
+            "clear"
+          ]
+        ],
+        [
+          2,
+          "2010-12-23T11:22:08-0700",
+          "2010-12-23T11:20:00-0700",
+          [
+            11.3,
+            63,
+            "clear"
+          ]
+        ],
+        [
+          3,
+          "2010-12-23T11:22:54-0700",
+          "2010-12-23T11:20:00-0700",
+          [
+            9.8,
+            67,
+            "clear"
+          ]
+        ]
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -7716,52 +7730,52 @@ when requesting Observation entities. For example, <code>http://example.org/v1.0
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code><span></span>POST /v1.0/CreateObservations HTTP/1.1
+<pre class="pygments highlight"><code>POST /v1.0/CreateObservations HTTP/1.1
 Host: example.org/
 Content-Type: application/json
 
 [
   {
-    &quot;Datastream&quot;: {
-      &quot;@iot.id&quot;: 1
+    "Datastream": {
+      "@iot.id": 1
     },
-    &quot;components&quot;: [
-      &quot;phenomenonTime&quot;,
-      &quot;result&quot;,
-      &quot;FeatureOfInterest/id&quot;
+    "components": [
+      "phenomenonTime",
+      "result",
+      "FeatureOfInterest/id"
     ],
-    &quot;dataArray@iot.count&quot;: 2,
-    &quot;dataArray&quot;: [
+    "dataArray@iot.count": 2,
+    "dataArray": [
       [
-        &quot;2010-12-23T10:20:00-0700&quot;,
+        "2010-12-23T10:20:00-0700",
         20,
         1
       ],
       [
-        &quot;2010-12-23T10:21:00-0700&quot;,
+        "2010-12-23T10:21:00-0700",
         30,
         1
       ]
     ]
   },
   {
-    &quot;Datastream&quot;: {
-      &quot;@iot.id&quot;: 2
+    "Datastream": {
+      "@iot.id": 2
     },
-    &quot;components&quot;: [
-      &quot;phenomenonTime&quot;,
-      &quot;result&quot;,
-      &quot;FeatureOfInterest/id&quot;
+    "components": [
+      "phenomenonTime",
+      "result",
+      "FeatureOfInterest/id"
     ],
-    &quot;dataArray@iot.count&quot;: 2,
-    &quot;dataArray&quot;: [
+    "dataArray@iot.count": 2,
+    "dataArray": [
       [
-        &quot;2010-12-23T10:20:00-0700&quot;,
+        "2010-12-23T10:20:00-0700",
         65,
         1
       ],
       [
-        &quot;2010-12-23T10:21:00-0700&quot;,
+        "2010-12-23T10:21:00-0700",
         60,
         1
       ]
@@ -7781,16 +7795,16 @@ Content-Type: application/json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-err">POST</span> <span class="tok-err">/v</span><span class="tok-mf">1.0</span><span class="tok-err">/CreateObservations</span> <span class="tok-err">HTTP/</span><span class="tok-mf">1.1</span>
-<span class="tok-mi">201</span> <span class="tok-err">Created</span>
-<span class="tok-err">Host:</span> <span class="tok-err">example.org</span>
-<span class="tok-err">Content-Type:</span> <span class="tok-err">application/json</span>
+<pre class="pygments highlight"><code data-lang="json">POST /v1.0/CreateObservations HTTP/1.1
+201 Created
+Host: example.org
+Content-Type: application/json
 
-<span class="tok-p">[</span>
-  <span class="tok-s2">&quot;http://examples.org/v1.0/Observations(1)&quot;</span><span class="tok-p">,</span>
-  <span class="tok-s2">&quot;error&quot;</span><span class="tok-p">,</span>
-  <span class="tok-s2">&quot;http://examples.org/v1.0/Observations(2)&quot;</span>
-<span class="tok-p">]</span></code></pre>
+[
+  "http://examples.org/v1.0/Observations(1)",
+  "error",
+  "http://examples.org/v1.0/Observations(2)"
+]</code></pre>
 </div>
 </div>
 </div>
@@ -8021,9 +8035,9 @@ Content-Type: application/json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;description&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;This is an updated description of a thing&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "description": "This is an updated description of a thing"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -8047,10 +8061,10 @@ The example shows a sample response of the following MQTT topic subscription: Da
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="json"><span></span><span class="tok-p">{</span>
-  <span class="tok-nt">&quot;result&quot;</span><span class="tok-p">:</span> <span class="tok-mi">45</span><span class="tok-p">,</span>
-  <span class="tok-nt">&quot;phenonmenonTime&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;2015-02-05T17:00:00Z&quot;</span>
-<span class="tok-p">}</span></code></pre>
+<pre class="pygments highlight"><code data-lang="json">{
+  "result": 45,
+  "phenonmenonTime": "2015-02-05T17:00:00Z"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -9992,62 +10006,8 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-08-01 09:19:44 UTC
+Last updated 2019-10-22 16:09:37 UTC
 </div>
 </div>
-<style>
-pre.pygments .hll { background-color: #ffffcc }
-pre.pygments  { background: #ffffff; }
-pre.pygments .tok-c { color: #008800; font-style: italic } /* Comment */
-pre.pygments .tok-err { color: #a61717; background-color: #e3d2d2 } /* Error */
-pre.pygments .tok-k { color: #000080; font-weight: bold } /* Keyword */
-pre.pygments .tok-ch { color: #008800; font-style: italic } /* Comment.Hashbang */
-pre.pygments .tok-cm { color: #008800; font-style: italic } /* Comment.Multiline */
-pre.pygments .tok-cp { color: #008080 } /* Comment.Preproc */
-pre.pygments .tok-cpf { color: #008800; font-style: italic } /* Comment.PreprocFile */
-pre.pygments .tok-c1 { color: #008800; font-style: italic } /* Comment.Single */
-pre.pygments .tok-cs { color: #008800; font-weight: bold } /* Comment.Special */
-pre.pygments .tok-gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
-pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
-pre.pygments .tok-gr { color: #aa0000 } /* Generic.Error */
-pre.pygments .tok-gh { color: #999999 } /* Generic.Heading */
-pre.pygments .tok-gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
-pre.pygments .tok-go { color: #888888 } /* Generic.Output */
-pre.pygments .tok-gp { color: #555555 } /* Generic.Prompt */
-pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
-pre.pygments .tok-gu { color: #aaaaaa } /* Generic.Subheading */
-pre.pygments .tok-gt { color: #aa0000 } /* Generic.Traceback */
-pre.pygments .tok-kc { color: #000080; font-weight: bold } /* Keyword.Constant */
-pre.pygments .tok-kd { color: #000080; font-weight: bold } /* Keyword.Declaration */
-pre.pygments .tok-kn { color: #000080; font-weight: bold } /* Keyword.Namespace */
-pre.pygments .tok-kp { color: #000080; font-weight: bold } /* Keyword.Pseudo */
-pre.pygments .tok-kr { color: #000080; font-weight: bold } /* Keyword.Reserved */
-pre.pygments .tok-kt { color: #000080; font-weight: bold } /* Keyword.Type */
-pre.pygments .tok-m { color: #0000FF } /* Literal.Number */
-pre.pygments .tok-s { color: #0000FF } /* Literal.String */
-pre.pygments .tok-na { color: #FF0000 } /* Name.Attribute */
-pre.pygments .tok-nt { color: #000080; font-weight: bold } /* Name.Tag */
-pre.pygments .tok-ow { font-weight: bold } /* Operator.Word */
-pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
-pre.pygments .tok-mb { color: #0000FF } /* Literal.Number.Bin */
-pre.pygments .tok-mf { color: #0000FF } /* Literal.Number.Float */
-pre.pygments .tok-mh { color: #0000FF } /* Literal.Number.Hex */
-pre.pygments .tok-mi { color: #0000FF } /* Literal.Number.Integer */
-pre.pygments .tok-mo { color: #0000FF } /* Literal.Number.Oct */
-pre.pygments .tok-sa { color: #0000FF } /* Literal.String.Affix */
-pre.pygments .tok-sb { color: #0000FF } /* Literal.String.Backtick */
-pre.pygments .tok-sc { color: #800080 } /* Literal.String.Char */
-pre.pygments .tok-dl { color: #0000FF } /* Literal.String.Delimiter */
-pre.pygments .tok-sd { color: #0000FF } /* Literal.String.Doc */
-pre.pygments .tok-s2 { color: #0000FF } /* Literal.String.Double */
-pre.pygments .tok-se { color: #0000FF } /* Literal.String.Escape */
-pre.pygments .tok-sh { color: #0000FF } /* Literal.String.Heredoc */
-pre.pygments .tok-si { color: #0000FF } /* Literal.String.Interpol */
-pre.pygments .tok-sx { color: #0000FF } /* Literal.String.Other */
-pre.pygments .tok-sr { color: #0000FF } /* Literal.String.Regex */
-pre.pygments .tok-s1 { color: #0000FF } /* Literal.String.Single */
-pre.pygments .tok-ss { color: #0000FF } /* Literal.String.Symbol */
-pre.pygments .tok-il { color: #0000FF } /* Literal.Number.Integer.Long */
-</style>
 </body>
 </html>
