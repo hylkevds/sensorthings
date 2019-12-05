@@ -1874,6 +1874,9 @@ CRUD::Create, Read, Update, and Delete</p>
 </div>
 <div class="title">Figure 1. IoT Reference Model (adapted from [ITU-T Y.2060])</div>
 </div>
+<div class="paragraph">
+<p>A service instance that implements security related extensions can notify clients of this by way of the <code>serverSettings</code> section of the document returned at the service root URI, as described in section <a href="#usage-no-resource-path">Section 9.2.1</a>. Security related extensions can also use this section to announce any security requirements to the clients.</p>
+</div>
 </div>
 </div>
 </div>
@@ -4386,15 +4389,18 @@ The value of the property named <code>serverSettings</code> SHALL be a JSON Obje
 If a service implements all requirements from a requirements class, it only needs to list the requirements class id.</p>
 </div>
 <div class="paragraph">
+<p>Security extensions can modify the list of requirements to only show those requirements that the user is allowed to use.
+For example, if a user is not allowed to delete entities, the security extension can hide the <a href="#requirement-create-update-delete-delete-entity">create-update-delete/delete-entity</a> requirement.
+In the most extreme case, a security extension would hide all requirements for a user that is not authenticated, except its own requirement and the instructions on how to authenticate.</p>
+</div>
+<div class="paragraph">
 <p>Extensions that need to expose additional server settings may do so in a property of the <code>serverSettings</code> object that is named after the conformance class URI of the requirement that defines this setting.</p>
 </div>
 <div class="paragraph">
-<p>Example 10: a SensorThings request with no resource path</p>
-</div>
-<div class="paragraph">
-<p><strong>Example Request:</strong></p>
+<p><strong>Example 10: a SensorThings request with no resource path</strong></p>
 </div>
 <div class="literalblock">
+<div class="title">Example Request:</div>
 <div class="content">
 <pre>http://example.org/v1.1/</pre>
 </div>
@@ -10234,7 +10240,7 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-04 12:53:46 UTC
+Last updated 2019-12-05 09:44:10 UTC
 </div>
 </div>
 </body>
