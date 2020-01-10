@@ -584,6 +584,7 @@ which may include some normative corrections.</p></td>
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#keywords">Keywords</a></li>
 <li><a href="#preface">Preface</a></li>
+<li><a href="#changes_v_11">Changes in version 1.1</a></li>
 <li><a href="#submittingorganizations">Submitting organizations</a></li>
 <li><a href="#submitters">Submitters</a></li>
 <li><a href="#scope">1. Scope</a></li>
@@ -1080,6 +1081,39 @@ which may include some normative corrections.</p></td>
 </div>
 <div class="paragraph">
 <p><em>recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_v_11"><a class="anchor" href="#changes_v_11"></a>Changes in version 1.1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Version 1.1 of the SensorThings API is an update to version 1.0 that is (mostly) backwards compatible with version 1.0.
+Besides the many small clarifications, the main changes are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All entities (except for HistoricalLocation) now have a field of the type JSON Object.
+In version 1.0 such a field already existed for the Thing entity (named <code>properties</code>), and for the Observation entity (named <code>parameters</code>).
+These fields proved to be extremely useful for storing additional structured meta data used in many domains, that could also be used in filters.
+Now, all entities except for HistoricalLocation have such a very useful property, whereby in the Observation entity it retains the name <code>parameters</code>.</p>
+</li>
+<li>
+<p>The service root page now shows the requirements that the server implements and allows extensions to expose additional settings.
+This allows users to easily see exactly which extensions and optional features a server implements.
+The MQTT extension can now list the MQTT endpoints on the root page, so that a user can discover those endpoints.</p>
+</li>
+<li>
+<p>MQTT topics now must start with the version number of the specification.
+There were differences between server implementations, with some requiring the version number prefix and others not.
+This change will fix those incompatibilities from this version on.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The first two changes add extra fields to the JSON returned by the server and should not influence clients made for version 1.0, as most client will ignore any fields they do not know.
+The second change may cause some minor issues for some clients that are not using the version prefix in MQTT topics, but those clients would already have issues connecting to any server that does use the version prefix in MQTT topics.</p>
 </div>
 </div>
 </div>
@@ -10392,7 +10426,7 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-10 13:47:19 UTC
+Last updated 2020-01-10 15:21:01 UTC
 </div>
 </div>
 </body>
