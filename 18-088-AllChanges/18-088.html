@@ -5050,10 +5050,10 @@ In the most extreme case, a security extension would hide all requirements for a
 <div class="ulist">
 <ul>
 <li>
-<p>$expand</p>
+<p>$select</p>
 </li>
 <li>
-<p>$select</p>
+<p>$expand</p>
 </li>
 </ul>
 </div>
@@ -5201,7 +5201,10 @@ In the most extreme case, a security extension would hide all requirements for a
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The $select system query option requests the service to return only the properties explicitly requested by the client. The value of a $select query option SHALL be a comma-separated list of selection clauses. Each selection clause SHALL be a property name (including navigation property names). In the response, the service SHALL return the specified content, if available, along with any available expanded navigation properties.</p>
+<p>The $select system query option requests the service to return only the properties explicitly requested by the client.
+ The value of a $select query option SHALL be a comma-separated list of selection clauses.
+ Each selection clause SHALL be a property name (including navigation property names).
+ In the response, the service SHALL return the specified content, if available, along with any available expanded navigation properties.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -5235,11 +5238,12 @@ In the most extreme case, a security extension would hide all requirements for a
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>http://example.org/v1.1/Datastreams(1)?$select=id,Observations&amp;$expand=Observations/FeatureOfInterest</pre>
+<pre>http://example.org/v1.1/Datastreams(1)?$select=id&amp;$expand=Observations/FeatureOfInterest</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>returns the id property of the Datastream entity, and all the properties of the entity identified by the Observations and FeatureOfInterest navigation properties.</p>
+<p>returns the id property of the Datastream entity, and all the properties of the entity identified by the Observations and FeatureOfInterest navigation properties
+(Expanded items are implicitly selected).</p>
 </div>
 <div class="paragraph">
 <p><strong>Example Request 3:</strong></p>
@@ -10426,7 +10430,7 @@ to identify, if each entity has the mandatory properties and relations, and fulf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-03 08:22:06 UTC
+Last updated 2020-09-11 12:25:18 UTC
 </div>
 </div>
 </body>
